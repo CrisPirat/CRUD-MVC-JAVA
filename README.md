@@ -12,7 +12,8 @@ NetBeans 8.1; Java 1.7; MySql;
 Dentro del proyecto modificar en la carpeta Configuracion la conexión a la base de datos
 
 
-#Script MySql 
+# SCRIPT MYSQL
+
 CREATE TABLE cliente (
     id int NOT NULL AUTO_INCREMENT,
     apellido varchar(255) NOT NULL,
