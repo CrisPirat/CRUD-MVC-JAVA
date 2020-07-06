@@ -10,6 +10,8 @@ La aplicación debe gestionar un listado de Clientes, cada uno con Órdenes comp
 NetBeans 8.1; Java 1.7; MySql; 
 
 Dentro del proyecto modificar en la carpeta Configuracion la conexión a la base de datos
+
+
 #Script MySql 
 CREATE TABLE cliente (
     id int NOT NULL AUTO_INCREMENT,
