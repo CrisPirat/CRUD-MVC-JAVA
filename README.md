@@ -7,8 +7,6 @@ La aplicación debe gestionar un listado de Clientes, cada uno con Órdenes comp
 
 # REQUERIMIENTOS PARA CORRER EL CÓDIGO
 
-NetBeans 8.1 
-Java 1.7
-MySql 
+NetBeans 8.1; Java 1.7; MySql; 
 
 Dentro del proyecto modificar en la carpeta Configuracion la conexión a la base de datos
