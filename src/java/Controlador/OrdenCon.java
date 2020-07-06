@@ -57,6 +57,7 @@ public class OrdenCon extends HttpServlet {
         } else if (action.equalsIgnoreCase("listar")) {
             acceso = listar;
         } else if (action.equalsIgnoreCase("add")) {
+            request.setAttribute("idcli", request.getParameter("id"));
             acceso = add;
         } else if (action.equalsIgnoreCase("Agregar")) {
             String cod = request.getParameter("txtCod");

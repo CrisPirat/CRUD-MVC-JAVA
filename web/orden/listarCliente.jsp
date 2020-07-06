@@ -16,7 +16,12 @@
     <body>
         <div class="container">
             <h1>Ordenes</h1>
-            <a class="btn btn-success" href="OrdenCon?accion=add">Nueva Orden</a>
+            <%
+                ClienteDAO daoCli = new ClienteDAO();
+                int idCli = Integer.parseInt((String) request.getAttribute("idcli"));
+                Cliente cli = (Cliente) daoCli.show(idCli);
+            %>
+            <a class="btn btn-success" href="OrdenCon?accion=add&id=<%= cli.getId()%>">Nueva Orden</a>
             <a class="btn btn-success" href="/CRUD-MVC-JAVA/">Menu</a>
             <br>
             <br>
@@ -30,11 +35,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <%
-                        ClienteDAO daoCli = new ClienteDAO(); 
-                        int idCli = Integer.parseInt((String) request.getAttribute("idcli"));
-                        Cliente cli = (Cliente) daoCli.show(idCli);
-                    %>
                     <tr>
                         <td class="text-center"><%= cli.getId()%></td>
                         <td class="text-center"><%= cli.getCli_apellido()%></td>
