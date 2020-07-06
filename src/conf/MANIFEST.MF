@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Autor: Cristobal Alejandro Caceres Erraez
+Fecha: 2020/07/06
+Ambiente_Desarrollo: NetBeans IDE 8.1, Java 1.7
