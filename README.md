@@ -10,3 +10,36 @@ La aplicación debe gestionar un listado de Clientes, cada uno con Órdenes comp
 NetBeans 8.1; Java 1.7; MySql; 
 
 Dentro del proyecto modificar en la carpeta Configuracion la conexión a la base de datos
+#Script MySql 
+CREATE TABLE cliente (
+    id int NOT NULL AUTO_INCREMENT,
+    apellido varchar(255) NOT NULL,
+    nombre varchar(255),
+    PRIMARY KEY (id)
+); 
+
+CREATE TABLE articulo (
+    id int NOT NULL AUTO_INCREMENT,
+    codigo varchar(255) NOT NULL,
+    nombre varchar(255),
+	precio float,
+    PRIMARY KEY (id)
+); 
+
+CREATE TABLE orden (
+    id int NOT NULL AUTO_INCREMENT,
+	clienteId int,
+	fecha date ,
+    PRIMARY KEY (id),
+	FOREIGN KEY (clienteId) REFERENCES cliente(id)
+); 
+
+CREATE TABLE ordenDetalle (
+    id int NOT NULL AUTO_INCREMENT,
+	ordenId int,
+	articuloId int,
+	cantidad float,
+    PRIMARY KEY (id),
+	FOREIGN KEY (ordenId) REFERENCES orden(id),
+	FOREIGN KEY (articuloId) REFERENCES articulo(id)
+); 
